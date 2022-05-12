@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  darkMode = false;
+
   constructor() {}
 
+  toggleTheme(){
+    this.darkMode = !this.darkMode;
+    if (this.darkMode){
+      document.body.setAttribute('color-theme', 'dark')
+    }
+    else{ 
+      document.body.setAttribute('color-theme', 'light')
+    }
+  }
 }

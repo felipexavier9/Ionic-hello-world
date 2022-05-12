@@ -1,8 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Hello World
-    </ion-title>
+    <ion-row>
+        <ion-title>
+          Hello World
+        </ion-title>
+        <ion-item lines="none">
+          <ion-label *ngIf="darkMode">Dark</ion-label>
+          <ion-label *ngIf="!darkMode">Light</ion-label>
+          <ion-toggle slot="start" name="blackberry" color="medium" (ionChange)="toggleTheme()"></ion-toggle>
+        </ion-item>
+    </ion-row>
   </ion-toolbar>
 </ion-header>
 
